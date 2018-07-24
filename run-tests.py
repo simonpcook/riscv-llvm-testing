@@ -37,6 +37,7 @@ DG_EXTRACT_RESULTS = os.path.join(TOPDIR, 'aap-gcc', 'contrib', 'dg-extract-resu
 OUTPUT_DIR = os.path.join(os.path.dirname(__file__), 'test-output')
 TEST_TOOL = 'riscv32-unknown-elf-clang'
 TEST_BOARD = 'riscv-sim/-march=rv32gc/-mabi=ilp32'
+TEST_TARGET = 'riscv32-unknown-elf'
 RUNTEST_FLAGS = []
 
 TestSet = namedtuple('TestSet', ['tool', 'set_dir', 'sub_dir', 'expect_file'])
@@ -190,6 +191,7 @@ def runtests(i, test_set, tests):
         '--directory=%s' % os.path.join(TEST_SUITE, set_dir),
         '--srcdir=%s' % TEST_SUITE,
         '--target_board=%s' % TEST_BOARD,
+        '--target=%s' % TEST_TARGET,
         '%s=%s' % (test_set.expect_file, test_list) ]
     args += RUNTEST_FLAGS
 
