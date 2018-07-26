@@ -32,8 +32,8 @@ import sys
 
 # Set names and locations of various things we interact with
 TOPDIR = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
-TEST_SUITE = os.path.join(TOPDIR, 'aap-gcc', 'gcc', 'testsuite')
-DG_EXTRACT_RESULTS = os.path.join(TOPDIR, 'aap-gcc', 'contrib', 'dg-extract-results.py')
+TEST_SUITE = os.path.join(TOPDIR, 'gcc-tests', 'gcc', 'testsuite')
+DG_EXTRACT_RESULTS = os.path.join(TOPDIR, 'gcc-tests', 'contrib', 'dg-extract-results.py')
 OUTPUT_DIR = os.path.join(os.path.dirname(__file__), 'test-output')
 TEST_TOOL = 'riscv32-unknown-elf-clang'
 TEST_BOARD = 'riscv-sim/-march=rv32gc/-mabi=ilp32'
